@@ -1,6 +1,7 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-# Laravel crash course
+# Laravel Docker
+# Рабочий шаблон docker & Laravel Framework 7.27.0
 
 Use:
 Terminal => Linux
@@ -33,3 +34,11 @@ sudo docker run -it --rm --name certbot \
             -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
             -p 80:80  certbot/certbot certonly
 ```
+# File .env
+
+DB_CONNECTION=mysql
+DB_HOST=test-db
+DB_PORT=3306
+DB_DATABASE=test
+DB_USERNAME=root
+DB_PASSWORD=secret
