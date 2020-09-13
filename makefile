@@ -1,7 +1,9 @@
 
-container_php       = test-app
-container_db        = test-db
-container_server    = test-webserver
+include .env
+
+container_php       = $(DOCKER_PREFIX)-app
+container_db        = $(DOCKER_PREFIX)-db
+container_server    = $(DOCKER_PREFIX)-webserver
 
 #############################################
 ###                                       ###
@@ -32,10 +34,10 @@ pm: #Set ownership
 ###                               ###
 #####################################
 
-start: #start docker containers @docker-compose up -d
+up: #start docker containers @docker-compose up -d
 	@docker-compose up -d
 
-stop: #stop docker containers
+down: #stop docker containers
 	@docker-compose down
 
 show: #show docker's containers
