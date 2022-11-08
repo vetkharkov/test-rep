@@ -37,8 +37,13 @@ sudo docker run -it --rm --name certbot \
 # File .env
 
 DB_CONNECTION=mysql
+
 DB_HOST=test-db
+
 DB_PORT=3306
+
 DB_DATABASE=test
+
 DB_USERNAME=root
+
 DB_PASSWORD=secret
